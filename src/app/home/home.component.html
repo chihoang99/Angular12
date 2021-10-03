@@ -1,4 +1,43 @@
 <div class="test">
     <h3>Hoang</h3>
-    <p>Đây là</p>
+    <p>Đây là component</p>
+    <br />
+    <!-- <input type="text" [(ngModel)]="name" /> -->
+    <!-- <input type="text" [(ngModel)]="age" />
+    <h2>Chào bạn {{ name }}</h2> -->
+    <!-- <h2 *ngIf="age > 18">Bạn già rồi !</h2>
+    <h2 *ngIf="age <= 18">Bạn trẻ lắm !</h2> -->
+
+    <!-- <div *ngIf="age <= 18; then tre; else gia"></div>
+    <ng-template #tre>
+        <h2>Bạn già rồi !</h2>
+    </ng-template>
+    <ng-template #gia>
+        <h2>Bạn trẻ lắm !</h2>
+    </ng-template> -->
+    <!-- <button (click)="resetName()">Reset tên</button> -->
+
+    <h1>Trái cây</h1>
+    <div *ngFor="let trai of traiCay; let i = index">
+        <li>{{ (i + 1) }}.{{trai}}</li>
+    </div>
+    <br />
+    <table class="table">
+        <tr>
+            <th>Thứ tự</th>
+            <th>Tên</th>
+            <th>Giá</th>
+            <th>Đại hạ giá</th>
+        </tr>
+        <tr *ngFor="let trai of traiCay2; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{trai.ten}}</td>
+            <td class="right">
+                <span [ngClass]="{ 'so-am': trai.gia<0 }">{{trai.gia}}</span>
+            </td>
+            <td>
+                <span *ngIf="trai.haGia">Đang hạ giá</span>
+            </td>
+        </tr>
+    </table>
 </div>
