@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   public age = 25;
   public traiCay = ['Táo', 'Nho', 'Cam', 'Quýt', 'Xoài'];
   public traiCay2 = [
-    {ten: 'Tao', gia: 12, haGia: true},
+    {ten: 'Táo', gia: 12, haGia: true},
     {ten: 'Nho', gia: -3.321, haGia: false},
     {ten: 'Cam', gia: 34.32, haGia: false},
     {ten: 'Quýt', gia: 32.31, haGia: true},
