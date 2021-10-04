@@ -71,14 +71,14 @@ export class HomeComponent implements OnInit {
     }
 
     //Cách 1
-    // const search = this.vietnamData.filter(data => data.city === city);
-    // console.log('search', search);
-    // if(search && search.length > 0){
-    //   this.districts = search[0].district;
-    // }
+    const search = this.vietnamData.filter(data => data.city === city);
+    console.log('search', search);
+    if(search && search.length > 0){
+      this.districts = search[0].district;
+    }
 
     //Cách 2
-    this.districts = this.vietnamData.find(data => data.city === city)?.district || [];
+    // this.districts = this.vietnamData.find(data => data.city === city)?.district || [];
   }
  
 
